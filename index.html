@@ -812,7 +812,6 @@
     border-bottom: 2px solid rgba(212,160,23,0.3);
   }
 
-  .spline-wrapper iframe,
   .spline-wrapper spline-viewer {
     position: absolute;
     inset: 0;
@@ -821,6 +820,10 @@
     border: none;
     display: block;
   }
+
+  /* Splineウォーターマーク非表示 */
+  spline-viewer::part(logo) { display: none !important; }
+  spline-viewer::part(watermark) { display: none !important; }
 
   /* =====================
      TABLET (768px以下)
